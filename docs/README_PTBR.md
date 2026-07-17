@@ -1,4 +1,4 @@
-> 🇧🇷 Versão em Português | [English version](docs/README_EN.md)
+> 🇧🇷 Versão em Português | [English version](README_EN.md)
 
 # MeshCore Brasil
 

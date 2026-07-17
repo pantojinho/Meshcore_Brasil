@@ -1,31 +1,31 @@
-# MeshCore Open - Feature Documentation
+# MeshCore Brasil — Documentação de Funcionalidades
 
-MeshCore Open is an open-source Flutter client for MeshCore LoRa mesh networking devices. This documentation covers every user-facing feature, how to access it, and what it does.
+O MeshCore Brasil é um cliente Flutter de código aberto para dispositivos de rede mesh LoRa MeshCore. Esta documentação abrange todas as funcionalidades voltadas ao usuário, como acessá-las e o que cada uma faz.
 
-## Table of Contents
+## Sumário
 
-1. [Scanner & Connection](scanner-and-connection.md) - BLE scanning, USB serial, and TCP connection
-2. [Navigation](navigation.md) - App flow, device screen, and quick-switch navigation
-3. [Contacts](contacts.md) - Contact management, groups, discovery, and sharing
-4. [Chat & Messaging](chat-and-messaging.md) - Direct messages, message status, reactions, and retries
-5. [Channels](channels.md) - Broadcast channels, communities, and channel chat
-6. [Map & Location](map-and-location.md) - Node map, path tracing, line-of-sight, and offline caching
-7. [Settings](settings.md) - Device settings, app settings, radio configuration, and exports
-8. [Notifications](notifications.md) - System notifications, unread badges, and notification preferences
-9. [Repeater Management](repeater-management.md) - Repeater hub, status, CLI, telemetry, and neighbors
-10. [Additional Features](additional-features.md) - GIF picker, localization, debug logs, SMAZ compression, and more
-11. [Routing Paths](routing-paths.md) - Path encoding, validation, device capability detection, and storage
-12. [BLE Protocol & Data Layer](ble-protocol.md) - Technical reference for the communication protocol and data architecture
+1. [Scanner & Conexão](scanner-and-connection.md) - Escaneamento BLE, USB serial e conexão TCP
+2. [Navegação](navigation.md) - Fluxo do app, tela do dispositivo e navegação rápida
+3. [Contatos](contacts.md) - Gerenciamento de contatos, grupos, descoberta e compartilhamento
+4. [Chat & Mensagens](chat-and-messaging.md) - Mensagens diretas, status de mensagens, reações e reenvios
+5. [Canais](channels.md) - Canais de transmissão, comunidades e chat de canal
+6. [Mapa & Localização](map-and-location.md) - Mapa de nós, rastreamento de caminho, linha de visada e cache offline
+7. [Configurações](settings.md) - Configurações do dispositivo, do app, rádio e exportações
+8. [Notificações](notifications.md) - Notificações do sistema, indicadores de não lidas e preferências de notificação
+9. [Gerenciamento de Repetidores](repeater-management.md) - Hub de repetidores, status, CLI, telemetria e vizinhos
+10. [Funcionalidades Adicionais](additional-features.md) - Seletor de GIF, localização, logs de depuração, compressão SMAZ e mais
+11. [Caminhos de Roteamento](routing-paths.md) - Codificação de caminho, validação, detecção de capacidade do dispositivo e armazenamento
+12. [Protocolo BLE & Camada de Dados](ble-protocol.md) - Referência técnica do protocolo de comunicação e arquitetura de dados
 
-## App Overview
+## Visão Geral do App
 
-MeshCore Open connects to MeshCore LoRa mesh radios over BLE, USB, or TCP. Once connected, users can:
+O MeshCore Brasil se conecta a rádios mesh LoRa MeshCore via BLE, USB ou TCP. Uma vez conectado, os usuários podem:
 
-- **Chat** with other mesh nodes via encrypted direct messages
-- **Broadcast** on shared channels (public, hashtag, private, or community-scoped)
-- **View nodes on a map** with GPS locations, predicted positions, and path traces
-- **Manage repeaters** with CLI access, telemetry, neighbor info, and settings
-- **Share contacts** via `meshcore://` URIs and QR codes
-- **Configure radio settings** including frequency, power, bandwidth, and spreading factor
-- **Cache offline maps** for use without internet connectivity
-- **Analyze line-of-sight** between nodes with terrain elevation profiles
+- **Conversar** com outros nós da mesh via mensagens diretas criptografadas
+- **Transmitir** em canais compartilhados (público, hashtag, privado ou escopo de comunidade)
+- **Visualizar nós no mapa** com localizações GPS, posições previstas e rastros de caminho
+- **Gerenciar repetidores** com acesso CLI, telemetria, informações de vizinhos e configurações
+- **Compartilhar contatos** via URIs `meshcore://` e QR codes
+- **Configurar parâmetros de rádio** incluindo frequência, potência, largura de banda e spreading factor
+- **Armazenar mapas offline** para uso sem conexão à internet
+- **Analisar linha de visada** entre nós com perfis de elevação do terreno
