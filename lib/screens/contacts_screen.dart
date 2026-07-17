@@ -1629,7 +1629,7 @@ class _ContactTile extends StatelessWidget {
       child: MeshCard(
         onTap: onTap,
         onLongPress: onLongPress,
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 18),
         child: Row(
           children: [
             // Avatar
@@ -1671,7 +1671,7 @@ class _ContactTile extends StatelessWidget {
                             fontWeight: unreadCount > 0
                                 ? FontWeight.w700
                                 : FontWeight.w600,
-                            fontSize: 17,
+                            fontSize: 19,
                             color: scheme.onSurface,
                           ),
                         ),
@@ -1692,8 +1692,7 @@ class _ContactTile extends StatelessWidget {
                       ],
                     ],
                   ),
-                  const SizedBox(height: 3),
-                  // Path / subtitle row
+                  // Path / subtitle row (escondido por enquanto)
                   Row(
                     children: [
                       Expanded(
