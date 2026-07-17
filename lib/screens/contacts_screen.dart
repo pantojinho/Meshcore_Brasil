@@ -1620,7 +1620,9 @@ class _ContactTile extends StatelessWidget {
     final hasPath = pathLen > 0 || contact.pathLength == 0;
 
     // Se o nome estiver vazio, usar o publicKey como fallback
-    final displayName = contact.name.isEmpty ? contact.publicKey : contact.name;
+    final displayName = contact.name.isEmpty
+        ? (contact.publicKey as String).substring(0, 8)
+        : contact.name;
 
     return GestureDetector(
       onSecondaryTapUp: PlatformInfo.isDesktop ? (_) => onLongPress() : null,
