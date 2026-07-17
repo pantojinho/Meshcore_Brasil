@@ -660,24 +660,25 @@ class _ContactsScreenState extends State<ContactsScreen>
         }),
       ],
       child: SizedBox(
-        height: 48,
+        height: 56,
         child: DecoratedBox(
           decoration: BoxDecoration(
             border: Border.all(color: Theme.of(context).colorScheme.outline),
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(14),
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
             child: Row(
               children: [
                 Expanded(
                   child: Text(
                     selectedGroupName,
                     overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 16),
                   ),
                 ),
                 const SizedBox(width: 8),
-                const Icon(Icons.arrow_drop_down),
+                const Icon(Icons.arrow_drop_down, size: 20),
               ],
             ),
           ),
@@ -775,13 +776,13 @@ class _ContactsScreenState extends State<ContactsScreen>
       ..sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
 
     final screenWidth = MediaQuery.sizeOf(context).width;
-    final searchExpandedWidth = (screenWidth * 0.70).clamp(
-      200.0,
+    final searchExpandedWidth = (screenWidth * 0.75).clamp(
+      250.0,
       double.infinity,
-    ); // allow expansion up to 70% of screen width for comfortable searching
-    final searchCollapsedWidth = (screenWidth * 0.35).clamp(
-      120.0,
-      180.0,
+    ); // allow expansion up to 75% of screen width for comfortable searching
+    final searchCollapsedWidth = (screenWidth * 0.45).clamp(
+      160.0,
+      240.0,
     ); // wider collapsed state so search/filter are more accessible
 
     return Column(
@@ -806,13 +807,13 @@ class _ContactsScreenState extends State<ContactsScreen>
                 width: viewState.contactsSearchExpanded
                     ? searchExpandedWidth
                     : searchCollapsedWidth,
-                height: 48,
+                height: 56,
                 child: DecoratedBox(
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Theme.of(context).colorScheme.outline,
                     ),
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(14),
                   ),
                   child: Row(
                     children: [
@@ -825,8 +826,8 @@ class _ContactsScreenState extends State<ContactsScreen>
                                   hintText: hintText,
                                   border: InputBorder.none,
                                   contentPadding: const EdgeInsets.symmetric(
-                                    horizontal: 12,
-                                    vertical: 10,
+                                    horizontal: 16,
+                                    vertical: 14,
                                   ),
                                 ),
                                 onChanged: (value) {
@@ -1623,30 +1624,30 @@ class _ContactTile extends StatelessWidget {
       child: MeshCard(
         onTap: onTap,
         onLongPress: onLongPress,
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
         child: Row(
           children: [
             // Avatar
             if (emoji != null)
               Container(
-                width: 42,
-                height: 42,
+                width: 46,
+                height: 46,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: scheme.surfaceContainerHigh,
                   border: Border.all(color: scheme.outlineVariant),
                 ),
                 alignment: Alignment.center,
-                child: Text(emoji, style: const TextStyle(fontSize: 20)),
+                child: Text(emoji, style: const TextStyle(fontSize: 22)),
               )
             else
               AvatarCircle(
                 name: contact.name,
-                size: 42,
+                size: 46,
                 color: isChat ? null : _avatarColor(),
                 icon: _avatarIcon(),
               ),
-            const SizedBox(width: 12),
+            const SizedBox(width: 16),
             // Main content
             Expanded(
               child: Column(
@@ -1664,8 +1665,8 @@ class _ContactTile extends StatelessWidget {
                           style: TextStyle(
                             fontWeight: unreadCount > 0
                                 ? FontWeight.w700
-                                : FontWeight.w500,
-                            fontSize: 15,
+                                : FontWeight.w600,
+                            fontSize: 17,
                             color: scheme.onSurface,
                           ),
                         ),
@@ -1699,7 +1700,7 @@ class _ContactTile extends StatelessWidget {
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                            fontSize: 12,
+                            fontSize: 13,
                             color: scheme.onSurfaceVariant,
                           ),
                         ),
