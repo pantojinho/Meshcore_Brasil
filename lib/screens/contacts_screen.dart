@@ -775,14 +775,14 @@ class _ContactsScreenState extends State<ContactsScreen>
       ..sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
 
     final screenWidth = MediaQuery.sizeOf(context).width;
-    final searchExpandedWidth = (screenWidth * 0.52).clamp(
-      97.0,
+    final searchExpandedWidth = (screenWidth * 0.70).clamp(
+      200.0,
       double.infinity,
-    ); // allow expansion up to 52% of screen width, but not less than the collapsed width
-    final searchCollapsedWidth = (screenWidth * 0.22).clamp(
-      97.0,
+    ); // allow expansion up to 70% of screen width for comfortable searching
+    final searchCollapsedWidth = (screenWidth * 0.35).clamp(
       120.0,
-    ); //two 48px icon buttons + 1px divider
+      180.0,
+    ); // wider collapsed state so search/filter are more accessible
 
     return Column(
       children: [
@@ -832,7 +832,7 @@ class _ContactsScreenState extends State<ContactsScreen>
                                 onChanged: (value) {
                                   _searchDebounce?.cancel();
                                   _searchDebounce = Timer(
-                                    const Duration(milliseconds: 300),
+                                    const Duration(milliseconds: 150),
                                     () {
                                       if (!mounted) return;
                                       context
@@ -1659,7 +1659,7 @@ class _ContactTile extends StatelessWidget {
                       Expanded(
                         child: Text(
                           contact.name,
-                          maxLines: 1,
+                          maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             fontWeight: unreadCount > 0
