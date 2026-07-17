@@ -1619,8 +1619,8 @@ class _ContactTile extends StatelessWidget {
     final isDirect = contact.pathLength >= 0;
     final hasPath = pathLen > 0 || contact.pathLength == 0;
 
-    // Debug print para verificar nome do contato
-    debugPrint('_ContactTile: nome="$contact.name", tipo=${contact.type}, emoji=${emoji}');
+    // Se o nome estiver vazio, usar o publicKey como fallback
+    final displayName = contact.name.isEmpty ? contact.publicKey : contact.name;
 
     return GestureDetector(
       onSecondaryTapUp: PlatformInfo.isDesktop ? (_) => onLongPress() : null,
@@ -1662,7 +1662,7 @@ class _ContactTile extends StatelessWidget {
                     children: [
                       Expanded(
                         child: Text(
-                          contact.name,
+                          displayName,
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
