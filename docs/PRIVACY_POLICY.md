@@ -1,104 +1,104 @@
-# Privacy Policy for MeshCore Open
+# Política de Privacidade do MeshCore Brasil
 
-**Last Updated:** January 11, 2026
+**Última atualização:** 16 de Julho de 2026
 
-## Introduction
+## Introdução
 
-MeshCore Open ("the App") is an open-source Flutter application for communicating with MeshCore LoRa mesh networking devices. This Privacy Policy explains how the App handles your information.
+O MeshCore Brasil ("o App") é um aplicativo open-source em Flutter para comunicação com dispositivos LoRa mesh networking MeshCore. Esta Política de Privacidade explica como o App trata suas informações.
 
-## Data Collection
+## Coleta de Dados
 
-### Data We Do NOT Collect
+### Dados que NÃO Coletamos
 
-MeshCore Open does **not**:
-- Collect personal information
-- Send data to external servers (except map tile requests)
-- Track your usage or behavior
-- Use analytics services
-- Require account creation
-- Share any data with third parties
+O MeshCore Brasil **não**:
+- Coleta informações pessoais
+- Envia dados para servidores externos (exceto requisições de mapas)
+- Rastreia seu uso ou comportamento
+- Utiliza serviços de analytics
+- Exige criação de conta
+- Compartilha quaisquer dados com terceiros
 
-### Data Stored Locally on Your Device
+### Dados Armazenados Localmente no Seu Dispositivo
 
-The App stores the following data **locally on your device only**:
+O App armazena os seguintes dados **apenas localmente no seu dispositivo**:
 
-- **Messages**: Chat messages sent and received through the mesh network
-- **Contacts**: Names and identifiers of mesh network contacts
-- **App Settings**: Your preferences (theme, language, notification settings)
-- **Channel Settings**: Configuration for mesh network channels
-- **Message History**: Path history for message routing
-- **Debug Logs**: Optional BLE and app debug logs (if enabled by user)
-- **Cached Map Tiles**: Offline map data for the mapping feature
+- **Mensagens**: Mensagens de chat enviadas e recebidas através da rede mesh
+- **Contatos**: Nomes e identificadores de contatos da rede mesh
+- **Configurações do App**: Suas preferências (tema, idioma, notificações)
+- **Configurações de Canais**: Configuração dos canais da rede mesh
+- **Histórico de Mensagens**: Histórico de caminho (path) para roteamento de mensagens
+- **Logs de Debug**: Logs opcionais de BLE e do app (se ativados pelo usuário)
+- **Tiles de Mapa em Cache**: Dados de mapa offline para a funcionalidade de mapas
 
-All locally stored data remains on your device and is never transmitted to us or any third party.
+Todos os dados armazenados localmente permanecem no seu dispositivo e nunca são transmitidos para nós ou qualquer terceiro.
 
-## Permissions
+## Permissões
 
-The App requires certain device permissions to function:
+O App requer certas permissões do dispositivo para funcionar:
 
-### Bluetooth Permissions
-- **BLUETOOTH, BLUETOOTH_ADMIN** (Android 11 and below)
+### Permissões de Bluetooth
+- **BLUETOOTH, BLUETOOTH_ADMIN** (Android 11 e inferior)
 - **BLUETOOTH_SCAN, BLUETOOTH_CONNECT, BLUETOOTH_ADVERTISE** (Android 12+)
 
-These permissions are used solely to discover and communicate with MeshCore hardware devices via Bluetooth Low Energy (BLE).
+Estas permissões são usadas exclusivamente para descobrir e se comunicar com dispositivos MeshCore via Bluetooth Low Energy (BLE).
 
-### Location Permission
+### Permissão de Localização
 - **ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION**
 
-Required by Android for BLE scanning on Android 11 and below. The App does not track or store your location. Location data may be optionally shared over the mesh network if you choose to enable location sharing features.
+Exigida pelo Android para escaneamento BLE no Android 11 e inferior. O App **não** rastreia ou armazena sua localização. Dados de localização podem ser opcionalmente compartilhados pela rede mesh se você ativar os recursos de compartilhamento de localização.
 
-### Internet Permission
+### Permissão de Internet
 - **INTERNET**
 
-Used only for downloading map tiles from OpenStreetMap tile servers when using the map feature. No personal data is transmitted.
+Usada apenas para baixar tiles de mapa dos servidores OpenStreetMap ao usar o recurso de mapa. Nenhum dado pessoal é transmitido.
 
-### Notification Permission
+### Permissão de Notificações
 - **POST_NOTIFICATIONS** (Android 13+)
 
-Used to display notifications for incoming messages when the app is in the background.
+Usada para exibir notificações de mensagens recebidas quando o app está em segundo plano.
 
-### Background Service Permissions
+### Permissões de Serviço em Segundo Plano
 - **FOREGROUND_SERVICE, FOREGROUND_SERVICE_CONNECTED_DEVICE, WAKE_LOCK**
 
-Used to maintain BLE connection with your MeshCore device while the app is in the background.
+Usadas para manter a conexão BLE com seu dispositivo MeshCore enquanto o app está em segundo plano.
 
-## Third-Party Services
+## Serviços de Terceiros
 
-### Map Tiles
-The App uses OpenStreetMap tile servers to display maps. When viewing maps, your device's IP address may be visible to the tile server. No other data is shared. See [OpenStreetMap's Privacy Policy](https://wiki.osmfoundation.org/wiki/Privacy_Policy) for more information.
+### Tiles de Mapa
+O App usa servidores OpenStreetMap para exibir mapas. Ao visualizar mapas, o endereço IP do seu dispositivo pode ser visível para o servidor de tiles. Nenhum outro dado é compartilhado. Consulte a [Política de Privacidade do OpenStreetMap](https://wiki.osmfoundation.org/wiki/Privacy_Policy) para mais informações.
 
-### GIF Search (Giphy)
-The App includes a GIF picker feature powered by Giphy. When you use the GIF search feature:
-- Your search queries are sent to Giphy's API servers
-- Your device's IP address is visible to Giphy
-- Giphy may collect usage data according to their privacy policy
+### Busca de GIFs (Giphy)
+O App inclui um seletor de GIFs powered by Giphy. Ao usar a busca de GIFs:
+- Suas consultas de busca são enviadas aos servidores da API do Giphy
+- O IP do seu dispositivo é visível para o Giphy
+- O Giphy pode coletar dados de uso conforme sua própria política de privacidade
 
-GIF search is optional and only activated when you choose to use it. See [Giphy's Privacy Policy](https://support.giphy.com/hc/en-us/articles/360032872931-GIPHY-Privacy-Policy) for more information about how they handle data.
+A busca de GIFs é opcional e só é ativada quando você escolhe usá-la. Consulte a [Política de Privacidade do Giphy](https://support.giphy.com/hc/en-us/articles/360032872931-GIPHY-Privacy-Policy) para mais informações.
 
-## Mesh Network Communications
+## Comunicações da Rede Mesh
 
-Messages sent through the MeshCore mesh network are transmitted over radio frequencies to other mesh devices. The App itself does not control or monitor these communications beyond facilitating the connection between your mobile device and your MeshCore hardware.
+Mensagens enviadas através da rede mesh MeshCore são transmitidas via radiofrequência para outros dispositivos mesh. O App em si não controla nem monitora essas comunicações além de facilitar a conexão entre seu dispositivo móvel e o hardware MeshCore.
 
-## Data Security
+## Segurança de Dados
 
-All data is stored locally on your device using standard Flutter/Android storage mechanisms. The App does not implement additional encryption for locally stored data beyond what the operating system provides.
+Todos os dados são armazenados localmente no seu dispositivo usando mecanismos padrão do Flutter/Android. O App não implementa criptografia adicional para dados armazenados localmente além do que o sistema operacional oferece.
 
-## Children's Privacy
+## Privacidade Infantil
 
-The App does not knowingly collect any personal information from children under 13 years of age.
+O App não coleta knowingly nenhuma informação pessoal de crianças menores de 13 anos.
 
-## Open Source
+## Código Aberto
 
-MeshCore Open is open-source software. You can review the complete source code to verify these privacy practices at [the project repository].
+O MeshCore Brasil é software open-source. Você pode revisar o código-fonte completo para verificar estas práticas de privacidade no [repositório do projeto](https://github.com/pantojinho/Meshcore_Brasil).
 
-## Changes to This Policy
+## Alterações nesta Política
 
-We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last Updated" date at the top of this policy.
+Podemos atualizar esta Política de Privacidade periodicamente. Quaisquer alterações serão refletidas na data de "Última atualização" no topo desta política.
 
-## Contact
+## Contato
 
-If you have questions about this Privacy Policy or the App's privacy practices, please open an issue on the project's GitHub repository.
+Se você tem dúvidas sobre esta Política de Privacidade ou as práticas de privacidade do App, por favor abra uma issue no [repositório GitHub do projeto](https://github.com/pantojinho/Meshcore_Brasil/issues).
 
 ---
 
-**Summary**: MeshCore Open is a privacy-respecting app that stores all data locally on your device. We do not collect, track, or share your personal information.
+**Resumo**: O MeshCore Brasil é um app que respeita sua privacidade e armazena todos os dados localmente no seu dispositivo. Não coletamos, rastreamos ou compartilhamos suas informações pessoais.

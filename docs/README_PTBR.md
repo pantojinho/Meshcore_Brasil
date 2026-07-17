@@ -1,4 +1,4 @@
-> 🇧🇷 Versão em Português | [English version](docs/README_EN.md)
+> 🇧🇷 Versão em Português | [English version](README_EN.md)
 
 # MeshCore Brasil
 
@@ -248,18 +248,5 @@ Para issues, dúvidas ou solicitações de funcionalidades, abra uma issue no Gi
 
 ## Agradecimentos
 
-Este projeto é um fork de **[MeshCore Open](https://github.com/zjs81/meshcore-open)**.
-
-O MeshCore Brasil foi baseado no projeto original e foi desenvolvido independentemente, com melhorias e ajustes focados na experiência brasileira. Agradecemos ao autor original, [@zjs81](https://github.com/zjs81), por criar essa ferramenta incrível de comunicação mesh LoRa.
-
-**Baseado em:**
-- Cliente Flutter open-source para dispositivos mesh LoRa MeshCore
-- Compatível com Bluetooth Low Energy (BLE), USB e TCP
-
-**Agradecimentos ao projeto original:**
-- GitHub: [zjs81/meshcore-open](https://github.com/zjs81/meshcore-open)
-- Website: [meshcoreopen.org](https://meshcoreopen.org/)
-
-**Feito com:**
-- [Flutter](https://flutter.dev/)
+- Construído com [Flutter](https://flutter.dev/)
 - Tiles de mapa de [OpenStreetMap](https://www.openstreetmap.org/)

@@ -1,71 +1,75 @@
-# How to contribute to Meshcore Open
+# Como contribuir para o MeshCore Brasil
 
-Before submitting any pull requests (PR), please review the following information.
+Antes de enviar qualquer pull request (PR), por favor revise as informações a seguir.
 
-Unsolicited PRs without previous discussion or open issues may be
-rejected. As may changes that are too broad (i.e. 100 files changed) or that
-cover too many separate changes. If the changes are clearly AI generated they
-may also be rejected. [See more](#ai-use)
+PRs não solicitados, sem discussão prévia ou issues abertas, podem ser
+rejeitados. O mesmo vale para alterações muito abrangentes (ex.: 100 arquivos
+modificados) ou que cubram muitas mudanças separadas. Se as alterações forem
+claramente geradas por IA, também poderão ser rejeitadas. [Saiba mais](#uso-de-ia)
 
-## First Step Checklist
+## Checklist de Primeiros Passos
 
-### **Did you find a bug?**
+### **Encontrou um bug?**
 
-* **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/zjs81/meshcore-open/issues).
+* **Certifique-se de que o bug ainda não foi reportado** pesquisando no GitHub em [Issues](https://github.com/pantojinho/Meshcore_Brasil/issues).
 
-* If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/zjs81/meshcore-open/issues/new).
-Be sure to include a **title and clear description**, as much relevant
-information as possible, and a **code sample** or an **executable test case**
-demonstrating the expected behavior that is not occurring. You can also include
-screenshots or video.
+* Se você não encontrar uma issue aberta que aborde o problema, [abra uma nova](https://github.com/pantojinho/Meshcore_Brasil/issues/new).
+Certifique-se de incluir um **título e uma descrição clara**, o máximo de
+informações relevantes possível, e um **exemplo de código** ou um **caso de
+teste executável** demonstrando o comportamento esperado que não está ocorrendo.
+Você também pode incluir screenshots ou vídeo.
 
-* DO NOT start work and submit a PR at this time, please discuss the issue and
-your implementation plan first.
+* NÃO comece a trabalhar e envie um PR neste momento; por favor, discuta o
+problema e seu plano de implementação primeiro.
 
-### **Did you fix whitespace, format code, or make a purely cosmetic patch?**
+### **Você corrigiu espaços em branco, formatou código ou fez uma alteração puramente cosmética?**
 
-Changes that are cosmetic in nature and do not add anything substantial to the
-stability, functionality, or testability of the application will generally not
-be accepted.
+Alterações de natureza cosmética que não adicionam nada substancial à
+estabilidade, funcionalidade ou testabilidade da aplicação geralmente não serão
+aceitas.
 
-### **Do you intend to add a new feature or change an existing one?**
+### **Você pretende adicionar uma nova feature ou alterar uma existente?**
 
-* Suggest your change in a new issue as a feature request.
+* Sugira sua mudança em uma nova issue como um pedido de feature.
 
-* DO NOT start work and submit a PR at this time, please discuss the change and
-your implementation plan first.
+* NÃO comece a trabalhar e envie um PR neste momento; por favor, discuta a
+mudança e seu plano de implementação primeiro.
 
-* After it is generally decided that the feature or change fits the goals of the
-project you can start work or open a PR if you have already started.
+* Após ser decidido que a feature ou mudança se encaixa nos objetivos do
+projeto, você pode começar a trabalhar ou abrir um PR se já tiver começado.
 
-## Submitting your patch
+## Enviando seu patch
 
-* All changes should be based on the `dev` branch. When creating your PR please
-be sure to change the target to merge into dev, and when starting work on a new
-branch be sure to start on latest `dev`.
+* Todas as alterações devem ser baseadas na branch `dev`. Ao criar seu PR,
+certifique-se de alterar o destino para merge em dev, e ao começar o trabalho
+em uma nova branch, certifique-se de iniciar a partir do `dev` mais recente.
 
-* Ensure the PR description clearly describes the problem and solution. Include
-the relevant issue number if applicable.
+* Certifique-se de que a descrição do PR descreva claramente o problema e a
+solução. Inclua o número da issue relevante, se aplicável.
 
-* The PR should contain **one commit** only, the commit message should have a
-clear title followed by a new line and then brief description if needed. PR with
-multiple commits will be squashed into one before merging if required. See
-[Git Mastery](https://git-mastery.org/lessons/commitMessage/) for more
-information on good commit messages.
+* O PR deve conter **apenas um commit**; a mensagem do commit deve ter um
+título claro seguido de uma nova linha e, em seguida, uma breve descrição, se
+necessário. PRs com múltiplos commits serão squashed em um só antes do merge,
+se necessário. Consulte
+[Git Mastery](https://git-mastery.org/lessons/commitMessage/) para mais
+informações sobre boas mensagens de commit.
 
-* **Before committing changes** on your branch, be sure to run both
-`dart format .` and `flutter analyze`. The continuous development checks will
-fail if issues here are not addressed before hand.
+* **Antes de fazer commit das alterações** em sua branch, certifique-se de
+executar tanto `dart format .` quanto `flutter analyze`. As verificações de
+desenvolvimento contínuo falharão se os problemas não forem resolvidos
+previamente.
 
-## AI-use
+## Uso de IA
 
-Everyone loves some help, AI agents are a tool in many of our belts. The project
-is not anti-AI.
+Todos adoram um pouco de ajuda; agentes de IA são uma ferramenta no cinto de
+muitos de nós. O projeto não é anti-IA.
 
-There are some limits to acceptable use however. Generally:
+No entanto, existem alguns limites para o uso aceitável. De modo geral:
 
-* All code generated by AI should be thoroughly reviewed by the contributor.
-* The changes should be tightly controlled to not change anything out of scope
-for the patch, bug fix, etc.
-* The contributor should have a good understanding of what the code does and how
-the application works in order to effectively be able to manage the agent.
+* Todo código gerado por IA deve ser cuidadosamente revisado pelo contribuidor.
+
+* As alterações devem ser bem controladas para não modificar nada fora do
+escopo do patch, correção de bug, etc.
+
+* O contribuidor deve ter uma boa compreensão do que o código faz e como a
+aplicação funciona, para conseguir gerenciar o agente de forma eficaz.

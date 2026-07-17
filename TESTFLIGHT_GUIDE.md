@@ -1,90 +1,90 @@
-# TestFlight and App Store Deployment Guide
+# Guia de Deploy TestFlight e App Store
 
-## Prerequisites
+## Pré-requisitos
 
-- [x] Apple Developer Account ($99/year) - [developer.apple.com](https://developer.apple.com)
-- [x] Xcode installed
-- [x] Apple Transporter app installed
-- [x] App icons ready (1024x1024px)
-- [x] Bundle ID configured: `com.monitormx.meshcoreopen`
+- [x] Conta Apple Developer ($99/ano) - [developer.apple.com](https://developer.apple.com)
+- [x] Xcode instalado
+- [x] App Apple Transporter instalado
+- [x] Ícones do app prontos (1024x1024px)
+- [x] Bundle ID configurado: `com.monitormx.meshcoreopen`
 
-## Step 1: Register Bundle Identifier
+## Passo 1: Registrar o Bundle Identifier
 
-1. Go to [Apple Developer - Identifiers](https://developer.apple.com/account/resources/identifiers/list)
-2. Click the **"+"** button
-3. Select **"App IDs"** → Continue
-4. Select **"App"** → Continue
-5. Fill in:
+1. Acesse [Apple Developer - Identifiers](https://developer.apple.com/account/resources/identifiers/list)
+2. Clique no botão **"+"**
+3. Selecione **"App IDs"** → Continue
+4. Selecione **"App"** → Continue
+5. Preencha:
    - **Description**: Meshcore Open
    - **Bundle ID**: Explicit - `com.monitormx.meshcoreopen`
-   - **Capabilities**: Leave defaults (or add as needed)
-6. Click **Continue** → **Register**
+   - **Capabilities**: Deixe os padrões (ou adicione conforme necessário)
+6. Clique em **Continue** → **Register**
 
-## Step 2: Create App in App Store Connect
+## Passo 2: Criar o App no App Store Connect
 
-1. Go to [App Store Connect](https://appstoreconnect.apple.com)
-2. Sign in with your Apple ID
-3. Click **"My Apps"**
-4. Click the **"+"** button → **"New App"**
-5. Fill in the form:
+1. Acesse o [App Store Connect](https://appstoreconnect.apple.com)
+2. Faça login com seu Apple ID
+3. Clique em **"My Apps"**
+4. Clique no botão **"+"** → **"New App"**
+5. Preencha o formulário:
    - **Platforms**: iOS
    - **Name**: Meshcore Open
    - **Primary Language**: English (U.S.)
-   - **Bundle ID**: Select `com.monitormx.meshcoreopen` from dropdown
-   - **SKU**: `meshcore-open-001` (or any unique identifier)
+   - **Bundle ID**: Selecione `com.monitormx.meshcoreopen` no menu suspenso
+   - **SKU**: `meshcore-open-001` (ou qualquer identificador único)
    - **User Access**: Full Access
-6. Click **"Create"**
+6. Clique em **"Create"**
 
-## Step 3: Build the IPA
+## Passo 3: Compilar o IPA
 
-Run these commands from the project directory:
+Execute estes comandos a partir do diretório do projeto:
 
 ```bash
-# Add CocoaPods to PATH
+# Adicionar CocoaPods ao PATH
 export PATH="/opt/homebrew/lib/ruby/gems/4.0.0/bin:$PATH"
 
-# Clean previous builds
+# Limpar compilações anteriores
 ../flutter/bin/flutter clean
 
-# Build IPA for App Store
+# Compilar IPA para App Store
 ../flutter/bin/flutter build ipa
 ```
 
-The IPA will be created at: `build/ios/ipa/meshcore_open.ipa`
+O IPA será criado em: `build/ios/ipa/meshcore_open.ipa`
 
-## Step 4: Upload to App Store Connect via Transporter
+## Passo 4: Enviar para o App Store Connect via Transporter
 
-1. **Open Apple Transporter**
-   - Launch from Applications folder
-   - Sign in with your Apple ID
+1. **Abra o Apple Transporter**
+   - Inicie a partir da pasta Applications
+   - Faça login com seu Apple ID
 
-2. **Upload the IPA**
-   - Drag and drop `build/ios/ipa/meshcore_open.ipa` into Transporter
-   - Click **"Deliver"**
-   - Wait for upload to complete (usually 1-5 minutes)
+2. **Enviar o IPA**
+   - Arraste e solte `build/ios/ipa/meshcore_open.ipa` no Transporter
+   - Clique em **"Deliver"**
+   - Aguarde a conclusão do upload (geralmente 1-5 minutos)
 
-3. **Processing**
-   - Apple will process your build (10-30 minutes)
-   - You'll receive an email when processing is complete
+3. **Processamento**
+   - A Apple processará seu build (10-30 minutos)
+   - Você receberá um e-mail quando o processamento for concluído
 
-## Step 5: Configure App Store Connect Metadata
+## Passo 5: Configurar Metadados no App Store Connect
 
-### App Information
-1. In App Store Connect, go to your app
-2. Fill in required information:
-   - **Subtitle**: Short description (30 chars max)
-   - **Privacy Policy URL**: Required for Bluetooth apps
-   - **Category**: Utilities or Productivity
-   - **Age Rating**: Complete questionnaire
+### Informações do App
+1. No App Store Connect, acesse seu app
+2. Preencha as informações necessárias:
+   - **Subtitle**: Descrição curta (máximo 30 caracteres)
+   - **Privacy Policy URL**: Obrigatório para apps com Bluetooth
+   - **Category**: Utilities ou Productivity
+   - **Age Rating**: Complete o questionário
 
-### App Store Listing
-1. Go to **App Store** tab
-2. Upload **Screenshots** (required):
-   - iPhone 6.7" display (1290 x 2796 pixels) - At least 1 screenshot
-   - iPhone 6.5" display (1242 x 2688 pixels) - At least 1 screenshot
-   - Optional: iPad screenshots
+### Listagem na App Store
+1. Acesse a aba **App Store**
+2. Envie as **Screenshots** (obrigatório):
+   - iPhone 6.7" display (1290 x 2796 pixels) - Pelo menos 1 screenshot
+   - iPhone 6.5" display (1242 x 2688 pixels) - Pelo menos 1 screenshot
+   - Opcional: Screenshots para iPad
 
-3. Fill in **Description**:
+3. Preencha a **Description**:
    ```
    Meshcore Open is a Flutter client for MeshCore LoRa mesh networking devices.
 
@@ -99,10 +99,10 @@ The IPA will be created at: `build/ios/ipa/meshcore_open.ipa`
    ```
 
 4. **Keywords**: `lora,mesh,networking,bluetooth,communication`
-5. **Support URL**: Your GitHub or website URL
-6. **Marketing URL**: (Optional)
+5. **Support URL**: Sua URL do GitHub ou site
+6. **Marketing URL**: (Opcional)
 
-### Version Information
+### Informações de Versão
 1. **What's New in This Version**:
    ```
    Initial release of Meshcore Open
@@ -113,84 +113,84 @@ The IPA will be created at: `build/ios/ipa/meshcore_open.ipa`
    - Community features
    ```
 
-2. **Build**: Select the uploaded build once processing completes
+2. **Build**: Selecione o build enviado após a conclusão do processamento
 
-## Step 6: TestFlight Setup
+## Passo 6: Configuração do TestFlight
 
-### Internal Testing (No Review Required)
-1. Go to **TestFlight** tab in App Store Connect
-2. Click **Internal Testing** → **"+"** to create a group
-3. Name your group (e.g., "Internal Testers")
-4. Add yourself as a tester using your email
-5. Select the build you uploaded
-6. Testers will receive an email with TestFlight invitation
+### Teste Interno (Sem Revisão Necessária)
+1. Acesse a aba **TestFlight** no App Store Connect
+2. Clique em **Internal Testing** → **"+"** para criar um grupo
+3. Nomeie seu grupo (ex.: "Internal Testers")
+4. Adicione a si mesmo como testador usando seu e-mail
+5. Selecione o build que você enviou
+6. Os testadores receberão um e-mail com o convite do TestFlight
 
-### External Testing (Requires Beta Review)
-1. Click **External Testing** → **"+"** to create a group
-2. Add build and testers
-3. Fill in **Test Information**:
-   - **What to Test**: Brief description of features
-   - **Feedback Email**: Your email address
-4. Click **Submit for Review**
-5. Beta review typically takes 24-48 hours
+### Teste Externo (Requer Beta Review)
+1. Clique em **External Testing** → **"+"** para criar um grupo
+2. Adicione o build e os testadores
+3. Preencha as **Test Information**:
+   - **What to Test**: Breve descrição das funcionalidades
+   - **Feedback Email**: Seu endereço de e-mail
+4. Clique em **Submit for Review**
+5. A beta review geralmente leva de 24 a 48 horas
 
-## Step 7: App Store Submission
+## Passo 7: Envio para a App Store
 
-Once you're ready for public release:
+Quando estiver pronto para o lançamento público:
 
-1. Go to **App Store** tab
-2. Complete all required metadata (if not done)
-3. Select your build
-4. Fill in **App Review Information**:
-   - **Contact Information**: Your name, phone, email
-   - **Demo Account**: If app requires login
-   - **Notes**: Any special instructions for reviewers
-5. Answer **Export Compliance** questions:
-   - Does your app use encryption? **Yes** (uses TLS/HTTPS)
-   - Is encryption registration required? **No** (standard encryption)
-6. Click **Add for Review**
-7. Review summary and click **Submit to App Review**
+1. Acesse a aba **App Store**
+2. Complete todos os metadados necessários (se ainda não fez)
+3. Selecione seu build
+4. Preencha as **App Review Information**:
+   - **Contact Information**: Seu nome, telefone e e-mail
+   - **Demo Account**: Se o app exigir login
+   - **Notes**: Quaisquer instruções especiais para os revisores
+5. Responda às perguntas de **Export Compliance**:
+   - Seu app usa criptografia? **Yes** (usa TLS/HTTPS)
+   - É necessário registro de criptografia? **No** (criptografia padrão)
+6. Clique em **Add for Review**
+7. Revise o resumo e clique em **Submit to App Review**
 
-## Step 8: After Submission
+## Passo 8: Após o Envio
 
-- **App Review**: Typically 24-48 hours
-- **Common Rejection Reasons**:
-  - Missing privacy policy
-  - Incomplete app information
-  - Crashes or bugs
-  - Misleading app description
+- **App Review**: Geralmente de 24 a 48 horas
+- **Motivos Comuns de Rejeição**:
+  - Política de privacidade ausente
+  - Informações do app incompletas
+  - Travamentos ou bugs
+  - Descrição do app enganosa
 
-- **If Approved**: You can release immediately or schedule a release date
-- **If Rejected**: Address issues and resubmit
+- **Se Aprovado**: Você pode lançar imediatamente ou agendar uma data de lançamento
+- **Se Rejeitado**: Corrija os problemas e reenvie
 
-## Updating the App
+## Atualizando o App
 
-When you need to release an update:
+Quando precisar lançar uma atualização:
 
-1. **Update version** in `pubspec.yaml`:
+1. **Atualize a versão** no `pubspec.yaml`:
    ```yaml
-   version: 0.5.0+6  # Increment version (0.5.0) and build number (+6)
+   version: 0.5.0+6  # Incremente a versão (0.5.0) e o número do build (+6)
    ```
 
-2. **Build new IPA**:
+2. **Compile o novo IPA**:
    ```bash
    export PATH="/opt/homebrew/lib/ruby/gems/4.0.0/bin:$PATH"
    ../flutter/bin/flutter clean
    ../flutter/bin/flutter build ipa
    ```
 
-3. **Upload via Transporter** (same process as above)
+3. **Envie via Transporter** (mesmo processo acima)
 
-4. **Create new version** in App Store Connect:
-   - Click **"+"** next to versions
-   - Select version number
-   - Update "What's New" text
-   - Select new build
-   - Submit for review
+4. **Crie uma nova versão** no App Store Connect:
+   - Clique em **"+"** ao lado de versions
+   - Selecione o número da versão
+   - Atualize o texto "What's New"
+   - Selecione o novo build
+   - Envie para revisão
 
-## macOS Build (Bonus)
+## Build para macOS (Bônus)
 
-To build for macOS:
+Para compilar para macOS:
 
 ```bash
 export PATH="/opt/homebrew/lib/ruby/gems/4.0.0/bin:$PATH"
@@ -199,46 +199,46 @@ cd build/macos/Build/Products/Release
 zip -r meshcore_open-macos.zip meshcore_open.app
 ```
 
-Distribution:
-- Share the zip file directly
-- Users unzip and drag to Applications
-- First run: Right-click → Open (to bypass Gatekeeper)
+Distribuição:
+- Compartilhe o arquivo zip diretamente
+- Os usuários descompactam e arrastam para a pasta Applications
+- Primeira execução: Clique com o botão direito → Open (para contornar o Gatekeeper)
 
-## Troubleshooting
+## Solução de Problemas
 
-### Build Errors
-- **CocoaPods not found**: Ensure PATH includes `/opt/homebrew/lib/ruby/gems/4.0.0/bin`
-- **No signing certificate**: Configure Team in Xcode (Signing & Capabilities)
-- **Bundle ID mismatch**: Check `ios/Runner.xcodeproj/project.pbxproj`
+### Erros de Compilação
+- **CocoaPods não encontrado**: Verifique se o PATH inclui `/opt/homebrew/lib/ruby/gems/4.0.0/bin`
+- **Nenhum certificado de assinatura**: Configure a Team no Xcode (Signing & Capabilities)
+- **Incompatibilidade de Bundle ID**: Verifique `ios/Runner.xcodeproj/project.pbxproj`
 
-### Upload Errors
-- **No profiles found**: Create app in App Store Connect first
-- **Bundle ID not registered**: Register in Apple Developer portal
-- **Authentication failed**: Use Transporter app instead of CLI
+### Erros de Upload
+- **Nenhum profile encontrado**: Crie o app no App Store Connect primeiro
+- **Bundle ID não registrado**: Registre no portal Apple Developer
+- **Falha de autenticação**: Use o app Transporter em vez da CLI
 
-### TestFlight Issues
-- **Build not appearing**: Wait 10-30 minutes for processing
-- **Can't add testers**: Check you have available slots (100 internal, 10,000 external)
-- **TestFlight crashes**: Check device logs in Xcode → Devices & Simulators
+### Problemas com TestFlight
+- **Build não aparece**: Aguarde 10-30 minutos para processamento
+- **Não é possível adicionar testadores**: Verifique se há vagas disponíveis (100 internos, 10.000 externos)
+- **TestFlight trava**: Verifique os logs do dispositivo em Xcode → Devices & Simulators
 
-## Important Files
+## Arquivos Importantes
 
-- **iOS IPA**: `build/ios/ipa/meshcore_open.ipa`
-- **macOS App**: `build/macos/Build/Products/Release/meshcore_open.app`
-- **Bundle ID Config**: `ios/Runner.xcodeproj/project.pbxproj`
-- **Version Info**: `pubspec.yaml`
+- **IPA do iOS**: `build/ios/ipa/meshcore_open.ipa`
+- **App do macOS**: `build/macos/Build/Products/Release/meshcore_open.app`
+- **Configuração do Bundle ID**: `ios/Runner.xcodeproj/project.pbxproj`
+- **Informações de Versão**: `pubspec.yaml`
 
-## Useful Links
+## Links Úteis
 
 - [App Store Connect](https://appstoreconnect.apple.com)
 - [Apple Developer Portal](https://developer.apple.com/account)
-- [TestFlight Documentation](https://developer.apple.com/testflight/)
-- [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/)
-- [Flutter iOS Deployment](https://docs.flutter.dev/deployment/ios)
+- [Documentação do TestFlight](https://developer.apple.com/testflight/)
+- [Diretrizes de Revisão da App Store](https://developer.apple.com/app-store/review/guidelines/)
+- [Deploy iOS com Flutter](https://docs.flutter.dev/deployment/ios)
 
-## Support
+## Suporte
 
-For issues with:
-- **App Store Process**: [Apple Developer Support](https://developer.apple.com/contact/)
-- **Flutter Build Issues**: [Flutter GitHub](https://github.com/flutter/flutter/issues)
-- **Meshcore Open App**: [GitHub Issues](https://github.com/wel97459/meshcore-open/issues)
+Para problemas com:
+- **Processo da App Store**: [Suporte Apple Developer](https://developer.apple.com/contact/)
+- **Problemas de Build do Flutter**: [Flutter GitHub](https://github.com/flutter/flutter/issues)
+- **App Meshcore Open**: [GitHub Issues](https://github.com/pantojinho/Meshcore_Brasil/issues)
